@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main () {
+
+	double valor, quantia, porcentagem, x;
+	int tipo;
+
+
+	printf("Escolha se deseja calcular a porcentagem de um valor (1) ou calcular o valor de uma porcentagem (2): ");
+	scanf("%d", &tipo);
+
+	if (tipo == 1) {
+		printf("\n");
+		printf("A opção escolhida foi de calcular a porcentagem de um valor\n\nDigite o valor total: ");
+		scanf ("%lf", &valor);
+		printf("Digite o valor a ser descoberto: ");
+		scanf ("%lf", &quantia);
+
+		x = quantia * 100;
+		porcentagem = x / valor;
+
+		printf("\n");
+
+		printf("%.2lf representa %.2lf porcento de %.2lf", quantia, porcentagem, valor);
+	}
+
+	if (tipo == 2) {
+		printf("\n");
+		printf("A opção escolhida foi de calcular o valor de uma porcentagem\n\nDigite o valor total: ");
+		scanf ("%lf", &valor);
+		printf("Digite a porcentagem a ser descoberta: ");
+		scanf ("%lf", &porcentagem);
+
+		x = porcentagem * valor;
+		quantia = x / 100;
+
+		printf("\n");
+
+		printf("%.2lf porcento de %.2lf é equivalente a %.2lf",porcentagem, valor, quantia);
+		
+	}
+
+	return 0;
+
+}
